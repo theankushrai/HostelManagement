@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/titleFragment2">
+
+    <fragment
+        android:id="@+id/titleFragment2"
+        android:name="com.example.hostelmanagement.TitleFragment"
+        android:label="TitleFragment" >
+        <action
+            android:id="@+id/action_titleFragment2_to_studentLogin"
+            app:destination="@id/studentLogin" />
+    </fragment>
+    <fragment
+        android:id="@+id/studentLogin"
+        android:name="com.example.hostelmanagement.student.StudentLogin"
+        android:label="fragment_student_login"
+        tools:layout="@layout/fragment_student_login" >
+        <action
+            android:id="@+id/action_studentLogin_to_afterLogin"
+            app:destination="@id/afterLogin" />
+    </fragment>
+    <fragment
+        android:id="@+id/afterLogin"
+        android:name="com.example.hostelmanagement.student.AfterLogin"
+        android:label="fragment_after_login"
+        tools:layout="@layout/fragment_after_login" >
+        <action
+            android:id="@+id/action_afterLogin_to_personalDetails"
+            app:destination="@id/personalDetails" />
+        <action
+            android:id="@+id/action_afterLogin_to_attendence"
+            app:destination="@id/attendence" />
+        <action
+            android:id="@+id/action_afterLogin_to_studentNotice"
+            app:destination="@id/studentNotice" />
+        <action
+            android:id="@+id/action_afterLogin_to_messMenu"
+            app:destination="@id/messMenu" />
+        <action
+            android:id="@+id/action_afterLogin_to_titleFragment22"
+            app:destination="@id/titleFragment2"
+            app:popUpTo="@id/titleFragment2"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/personalDetails"
+        android:name="com.example.hostelmanagement.student.PersonalDetails"
+        android:label="fragment_personal_details"
+        tools:layout="@layout/fragment_personal_details" />
+    <fragment
+        android:id="@+id/attendence"
+        android:name="com.example.hostelmanagement.student.Attendence"
+        android:label="fragment_attendence"
+        tools:layout="@layout/fragment_attendence" />
+    <fragment
+        android:id="@+id/studentNotice"
+        android:name="com.example.hostelmanagement.student.StudentNotice"
+        android:label="fragment_student_notice"
+        tools:layout="@layout/fragment_student_notice" />
+    <fragment
+        android:id="@+id/messMenu"
+        android:name="com.example.hostelmanagement.student.MessMenu"
+        android:label="fragment_mess_menu"
+        tools:layout="@layout/fragment_mess_menu" />
+</navigation>

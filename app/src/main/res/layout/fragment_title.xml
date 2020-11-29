@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context="com.example.hostelmanagement.student.StudentLogin"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:id="@+id/cmr_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.003"
+            app:srcCompat="@drawable/cmr_logo" />
+
+        <Button
+            android:id="@+id/student_access"
+            android:layout_width="155dp"
+            android:layout_height="78dp"
+            android:text="Student Access"
+            android:backgroundTint="@color/button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/warden_access"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cmr_logo"
+            app:layout_constraintVertical_bias="0.303" />
+
+        <Button
+            android:id="@+id/warden_access"
+            android:layout_width="155dp"
+            android:layout_height="78dp"
+            android:text="Warden Access"
+            android:backgroundTint="@color/button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/student_access"
+            app:layout_constraintTop_toBottomOf="@+id/cmr_logo"
+            app:layout_constraintVertical_bias="0.303" />
+
+        <Button
+            android:id="@+id/parent_access"
+            android:layout_width="155dp"
+            android:layout_height="78dp"
+            android:text="Parent Access"
+            android:backgroundTint="@color/button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/security_access"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/student_access"
+            app:layout_constraintVertical_bias="0.653" />
+
+        <Button
+            android:id="@+id/security_access"
+            android:layout_width="155dp"
+            android:layout_height="78dp"
+            android:text="Security Access"
+            android:backgroundTint="@color/button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/parent_access"
+            app:layout_constraintTop_toBottomOf="@+id/warden_access"
+            app:layout_constraintVertical_bias="0.653" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="105dp"
+            android:layout_height="96dp"
+            app:layout_constraintBottom_toTopOf="@+id/student_access"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.176"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cmr_logo"
+            app:layout_constraintVertical_bias="0.487"
+            app:srcCompat="@drawable/student1" />
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="105dp"
+            android:layout_height="96dp"
+            android:layout_marginStart="80dp"
+            android:layout_marginLeft="80dp"
+            app:layout_constraintBottom_toTopOf="@+id/warden_access"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.089"
+            app:layout_constraintStart_toEndOf="@+id/imageView5"
+            app:layout_constraintTop_toBottomOf="@+id/cmr_logo"
+            app:layout_constraintVertical_bias="0.487"
+            app:srcCompat="@drawable/warden1" />
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="105dp"
+            android:layout_height="96dp"
+            app:layout_constraintBottom_toTopOf="@+id/parent_access"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.176"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/student_access"
+            app:layout_constraintVertical_bias="0.535"
+            app:srcCompat="@drawable/parent" />
+
+        <ImageView
+            android:id="@+id/imageView9"
+            android:layout_width="105dp"
+            android:layout_height="96dp"
+            app:layout_constraintBottom_toTopOf="@+id/security_access"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.585"
+            app:layout_constraintStart_toEndOf="@+id/imageView7"
+            app:layout_constraintTop_toBottomOf="@+id/warden_access"
+            app:layout_constraintVertical_bias="0.535"
+            app:srcCompat="@drawable/security1" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
