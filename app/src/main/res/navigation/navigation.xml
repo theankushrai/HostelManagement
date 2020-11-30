@@ -8,10 +8,13 @@
     <fragment
         android:id="@+id/titleFragment2"
         android:name="com.example.hostelmanagement.TitleFragment"
-        android:label="TitleFragment" >
+        android:label="TitleFragment">
         <action
             android:id="@+id/action_titleFragment2_to_studentLogin"
             app:destination="@id/studentLogin" />
+        <action
+            android:id="@+id/action_titleFragment2_to_wardenLogin"
+            app:destination="@id/wardenLogin" />
     </fragment>
     <fragment
         android:id="@+id/studentLogin"
@@ -65,4 +68,41 @@
         android:name="com.example.hostelmanagement.student.MessMenu"
         android:label="fragment_mess_menu"
         tools:layout="@layout/fragment_mess_menu" />
+    <fragment
+        android:id="@+id/wardenLogin"
+        android:name="com.example.hostelmanagement.warden.WardenLogin"
+        android:label="WardenLogin">
+        <action
+            android:id="@+id/action_wardenLogin_to_wardenAfterLogin"
+            app:destination="@id/wardenAfterLogin" />
+    </fragment>
+    <fragment
+        android:id="@+id/wardenAfterLogin"
+        android:name="com.example.hostelmanagement.warden.WardenAfterLogin"
+        android:label="WardenAfterLogin">
+        <action
+            android:id="@+id/action_wardenAfterLogin_to_personalDetails"
+            app:destination="@id/personalDetails" />
+        <action
+            android:id="@+id/action_wardenAfterLogin_to_checkAdminNotice"
+            app:destination="@id/checkAdminNotice" />
+        <action
+            android:id="@+id/action_wardenAfterLogin_to_wardenUpdateNotice"
+            app:destination="@id/wardenUpdateNotice" />
+        <action
+            android:id="@+id/action_wardenAfterLogin_to_titleFragment2"
+            app:destination="@id/titleFragment2"
+            app:popUpTo="@id/titleFragment2"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/checkAdminNotice"
+        android:name="com.example.hostelmanagement.warden.CheckAdminNotice"
+        android:label="fragment_check_admin_notice"
+        tools:layout="@layout/fragment_check_admin_notice" />
+    <fragment
+        android:id="@+id/wardenUpdateNotice"
+        android:name="com.example.hostelmanagement.warden.WardenUpdateNotice"
+        android:label="fragment_warden_update_notice"
+        tools:layout="@layout/fragment_warden_update_notice" />
 </navigation>
