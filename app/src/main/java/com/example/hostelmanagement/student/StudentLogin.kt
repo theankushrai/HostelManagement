@@ -9,15 +9,18 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import com.example.hostelmanagement.R
-import com.example.hostelmanagement.database.Student
 import com.example.hostelmanagement.databinding.FragmentStudentLoginBinding
 
 class StudentLogin : Fragment() {
 
+    companion object {
+        const val ANKUSH_USN: String = "18BBTCS012"
+        const val AMAR_USN: String = "18BBTCS009"
+        const val AKASH_USN: String = "18BBTCS006"
+        const val ADARSH_USN: String = "18BBTCS005"
+    }
 
     lateinit var binding: FragmentStudentLoginBinding
-    lateinit var viewModel: StudentViewModel
-    lateinit var singleStudent: Student
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -35,44 +38,32 @@ class StudentLogin : Fragment() {
                 val enteredName = binding.nameEditext.text.toString()
                 val enteredUsn = binding.usnEditext.text.toString()
                 it.findNavController().navigate(
-                    StudentLoginDirections.actionStudentLoginToAfterLogin(
-                        enteredName,
-                        enteredUsn,
-                        singleStudent
-                    )
+                    StudentLoginDirections.actionStudentLoginToAfterLogin(enteredName, enteredUsn)
                 )
             }
         }
-        val application = requireNotNull(activity).application
-        viewModel = StudentViewModel(application)
-
-
         return binding.root
     }
 
     private fun loginSuccessful(): Boolean {
-        val studentList: List<Student> = getstudentList()
         if (binding.usnEditext.text.toString() == "") {
-            Toast.makeText(context, "Empty Name Field", Toast.LENGTH_SHORT).show()
-            return false
-        } else if (binding.nameEditext.text.toString() == "") {
             Toast.makeText(context, "Empty USN Field", Toast.LENGTH_SHORT).show()
             return false
-        } else {
-            for (i in studentList) {
-                if (i.name == binding.nameEditext.toString() && i.USN == binding.usnEditext.toString()) {
-                    singleStudent = i
-                    return true
-                }
-            }
+        } else if (binding.nameEditext.text.toString() == "") {
+            Toast.makeText(context, "Empty NAME Field", Toast.LENGTH_SHORT).show()
+            return false
+        } else if (binding.usnEditext.text.toString() == ANKUSH_USN
+            || binding.usnEditext.text.toString() == ADARSH_USN
+            || binding.usnEditext.text.toString() == AKASH_USN
+            || binding.usnEditext.text.toString() == AMAR_USN
+        ) {
+            return true
         }
         Toast.makeText(context, "Wrong Details", Toast.LENGTH_SHORT).show()
         return false
     }
 
-    private fun getstudentList(): List<Student> {
-        return viewModel.allstudents
-    }
+
 }
 
 

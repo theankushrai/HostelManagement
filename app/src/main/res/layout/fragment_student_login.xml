@@ -27,7 +27,6 @@
                 android:layout_width="match_parent"
                 android:id="@+id/usn_editext"
                 android:layout_height="match_parent"
-                android:ems="10"
                 android:hint="USN"
                 android:inputType="textCapCharacters"
                 android:textSize="22sp"
@@ -48,7 +47,7 @@
                 android:id="@+id/name_editext"
                 android:ems="10"
                 android:hint="Name"
-                android:inputType="textPassword"
+                android:inputType="text"
                 android:textSize="22sp"
                 android:layout_marginTop="28dp"
                 />

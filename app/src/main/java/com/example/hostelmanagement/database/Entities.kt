@@ -14,7 +14,7 @@ data class Student(
     val room_no: Int,
     val home_address: String,
     val e_mail: String,
-    val mobile_no: Int
+    val mobile_no: Long
 ) : Parcelable
 
 @Entity
