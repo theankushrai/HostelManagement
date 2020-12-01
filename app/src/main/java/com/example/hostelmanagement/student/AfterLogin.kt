@@ -23,8 +23,15 @@ class AfterLogin : Fragment() {
          binding=DataBindingUtil.inflate(layoutInflater,R.layout.fragment_after_login,container,false)
 
         //setting on click listener
+        val args = AfterLoginArgs.fromBundle(requireArguments())
         binding.personalDetailsButton.setOnClickListener {
-            it.findNavController().navigate(R.id.action_afterLogin_to_personalDetails)
+            it.findNavController().navigate(
+                AfterLoginDirections.actionAfterLoginToPersonalDetails(
+                    args.enteredName,
+                    args.enteredUsn,
+                    args.singleStudent
+                )
+            )
         }
         binding.attendenceButton.setOnClickListener {
             it.findNavController().navigate(R.id.action_afterLogin_to_attendence)

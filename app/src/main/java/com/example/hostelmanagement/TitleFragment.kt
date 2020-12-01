@@ -26,6 +26,9 @@ class TitleFragment : Fragment() {
         binding.wardenAccess.setOnClickListener {
             it.findNavController().navigate(R.id.action_titleFragment2_to_wardenLogin)
         }
+        binding.parentAccess.setOnClickListener {
+            it.findNavController().navigate(R.id.action_titleFragment2_to_parentsMain)
+        }
 
         return binding.root
 
