@@ -31,6 +31,8 @@ class WardenAllStudentDetials : Fragment() {
         val adapter = AllStudentsAdapter()
         binding.allstudentRecyclerView.layoutManager = LinearLayoutManager(context)
         binding.allstudentRecyclerView.adapter = adapter
+
+
         viewModel.allstudents.observe(viewLifecycleOwner, { list ->
             list.let {
                 adapter.submitList(it)

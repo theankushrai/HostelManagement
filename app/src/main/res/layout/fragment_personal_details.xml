@@ -9,17 +9,19 @@
         android:background="#F7F5F8"
         tools:context="com.example.hostelmanagement.student.PersonalDetails">
 
+
         <ImageView
             android:id="@+id/imageView8"
             android:layout_width="235dp"
             android:layout_height="203dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
+            android:layout_marginTop="50dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0"
-            app:srcCompat="@drawable/profile" />
+            app:layout_constraintHorizontal_bias="0.443"
+            tools:src="@drawable/ankush" />
 
         <TextView
             android:id="@+id/textView2"
@@ -128,13 +130,24 @@
             android:id="@+id/mobilenoTetview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            tools:text="9424958452"
             android:textSize="25sp"
             app:layout_constraintBottom_toBottomOf="@+id/textView9"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.49"
-            app:layout_constraintStart_toEndOf="@+id/textView9" />
+            app:layout_constraintStart_toEndOf="@+id/textView9"
+            tools:text="9424958452" />
 
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/blackdim"
+            android:paddingStart="1dp"
+            android:paddingEnd="1dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/mobilenoTetview" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
