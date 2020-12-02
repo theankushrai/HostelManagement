@@ -28,7 +28,7 @@ class WardenAfterLogin : Fragment() {
 
         //setting on click listenenrs
         binding.studentDetailsButton.setOnClickListener {
-            it.findNavController().navigate(R.id.action_wardenAfterLogin_to_parentsInformation)
+            it.findNavController().navigate(R.id.action_wardenAfterLogin_to_wardenAllStudentDetials)
         }
         binding.updateHostelNoticeButton.setOnClickListener {
             it.findNavController().navigate(R.id.action_wardenAfterLogin_to_wardenUpdateNotice)

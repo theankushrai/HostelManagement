@@ -93,7 +93,9 @@
         android:label="WardenLogin">
         <action
             android:id="@+id/action_wardenLogin_to_wardenAfterLogin"
-            app:destination="@id/wardenAfterLogin" />
+            app:destination="@id/wardenAfterLogin"
+            app:popUpTo="@id/wardenLogin"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/wardenAfterLogin"
@@ -111,8 +113,8 @@
             app:popUpTo="@id/titleFragment2"
             app:popUpToInclusive="true" />
         <action
-            android:id="@+id/action_wardenAfterLogin_to_parentsInformation"
-            app:destination="@id/parentsInformation" />
+            android:id="@+id/action_wardenAfterLogin_to_wardenAllStudentDetials"
+            app:destination="@id/wardenAllStudentDetials" />
     </fragment>
     <fragment
         android:id="@+id/checkAdminNotice"
@@ -143,4 +145,8 @@
             android:id="@+id/action_parentsInformation_to_personalDetails"
             app:destination="@id/personalDetails" />
     </fragment>
+    <fragment
+        android:id="@+id/wardenAllStudentDetials"
+        android:name="com.example.hostelmanagement.warden.WardenAllStudentDetials"
+        android:label="WardenAllStudentDetials" />
 </navigation>
