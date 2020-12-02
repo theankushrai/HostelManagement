@@ -11,7 +11,7 @@ import androidx.room.TypeConverters
 abstract class HostelDatabase : RoomDatabase() {
 
     abstract fun getStudentDao(): StudentDao
-    abstract fun getStudentNoticeDao(): StudentNoticeDao
+    abstract fun getNoticeDao(): NoticeDao
 
     companion object {
         // Singleton prevents multiple instances of database opening at the

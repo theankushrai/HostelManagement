@@ -17,5 +17,4 @@ class StudentRepository(private val studentDao: StudentDao) {
     suspend fun updateAttendence(student: Student) {
         studentDao.updateAttendence(student)
     }
-
 }

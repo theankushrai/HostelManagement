@@ -2,14 +2,11 @@ package com.example.hostelmanagement.student
 
 import android.os.Bundle
 import android.view.LayoutInflater
-import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
-import androidx.activity.OnBackPressedCallback
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
-import androidx.navigation.fragment.findNavController
 import com.example.hostelmanagement.R
 import com.example.hostelmanagement.databinding.FragmentAfterLoginBinding
 
@@ -47,26 +44,7 @@ class AfterLogin : Fragment() {
         binding.backButton.setOnClickListener {
             onBackButtonClick()
         }
-
-        //back pressed callback
-        activity?.onBackPressedDispatcher?.addCallback(
-            viewLifecycleOwner,
-            object : OnBackPressedCallback(true) {
-                override fun handleOnBackPressed() {
-                    findNavController().navigate(R.id.action_afterLogin_to_titleFragment22)
-                }
-
-            })
-
-
-        setHasOptionsMenu(true)
         return binding.root
-
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        findNavController().navigate(R.id.action_afterLogin_to_titleFragment22)
-        return super.onOptionsItemSelected(item)
 
     }
 

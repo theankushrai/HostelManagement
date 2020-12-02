@@ -32,7 +32,7 @@ class Attendence : Fragment() {
         //to displaya attendece in textbox
         displayAttendence()
         val applicationn = requireNotNull(activity).application
-        viewModel = StudentViewModel(applicationn)
+        viewModel = StudentViewModel(applicationn, resources)
         return binding.root
 
     }

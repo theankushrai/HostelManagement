@@ -6,6 +6,7 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 import kotlinx.parcelize.Parcelize
 
+
 @Parcelize
 @Entity
 data class Student(
@@ -20,8 +21,7 @@ data class Student(
 
 @Entity
 data class StudentNotice(
-        @PrimaryKey(autoGenerate = true) var _id: Int = 0,
-        val notice: Bitmap
+        val notice: Bitmap,
+        @PrimaryKey(autoGenerate = true) var _id: Int = 0
 )
-
 
