@@ -9,39 +9,35 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import com.example.hostelmanagement.R
+import com.example.hostelmanagement.database.Student
 import com.example.hostelmanagement.databinding.FragmentStudentLoginBinding
 
 class StudentLogin : Fragment() {
-
-    companion object {
-        const val ANKUSH_USN: String = "18BBTCS012"
-        const val AMAR_USN: String = "18BBTCS009"
-        const val AKASH_USN: String = "18BBTCS006"
-        const val ADARSH_USN: String = "18BBTCS005"
-    }
-
+    lateinit var viewModel: StudentViewModel
     lateinit var binding: FragmentStudentLoginBinding
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+            inflater: LayoutInflater, container: ViewGroup?,
+            savedInstanceState: Bundle?
     ): View {
         // Inflate the layout for this fragment
         binding = DataBindingUtil.inflate(
-            layoutInflater,
-            R.layout.fragment_student_login,
-            container,
-            false
+                layoutInflater,
+                R.layout.fragment_student_login,
+                container,
+                false
         )
         //set on click listener
         binding.loginButton.setOnClickListener {
             if (loginSuccessful()) {
-                val enteredName = binding.nameEditext.text.toString()
-                val enteredUsn = binding.usnEditext.text.toString()
+                val singleStudent = viewModel.singleStudent as Student
                 it.findNavController().navigate(
-                    StudentLoginDirections.actionStudentLoginToAfterLogin(enteredName, enteredUsn)
+                        StudentLoginDirections.actionStudentLoginToAfterLogin(singleStudent)
                 )
             }
         }
+        val application = requireNotNull(activity).application
+        viewModel = StudentViewModel(application)
+        viewModel.insert(Student("sdjlkf", "18BBTCS012", 21, "f", "f", 545))
         return binding.root
     }
 
@@ -52,14 +48,14 @@ class StudentLogin : Fragment() {
         } else if (binding.nameEditext.text.toString() == "") {
             Toast.makeText(context, "Empty NAME Field", Toast.LENGTH_SHORT).show()
             return false
-        } else if (binding.usnEditext.text.toString() == ANKUSH_USN
-            || binding.usnEditext.text.toString() == ADARSH_USN
-            || binding.usnEditext.text.toString() == AKASH_USN
-            || binding.usnEditext.text.toString() == AMAR_USN
-        ) {
-            return true
+        } else {
+
+            viewModel.verifyLogin(binding.nameEditext.text.toString(), binding.usnEditext.text.toString())
+            if (viewModel.singleStudent?.USN == binding.usnEditext.text.trim().toString() && viewModel.singleStudent?.name == binding.nameEditext.text.trim().toString()) {
+                Toast.makeText(context, "Welcome ${viewModel.singleStudent!!.name}", Toast.LENGTH_SHORT).show()
+                return true
+            }
         }
-        Toast.makeText(context, "Wrong Details", Toast.LENGTH_SHORT).show()
         return false
     }
 

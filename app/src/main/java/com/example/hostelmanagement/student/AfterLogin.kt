@@ -29,10 +29,7 @@ class AfterLogin : Fragment() {
         val args = AfterLoginArgs.fromBundle(requireArguments())
         binding.personalDetailsButton.setOnClickListener {
             it.findNavController().navigate(
-                AfterLoginDirections.actionAfterLoginToPersonalDetails(
-                    args.enteredName,
-                    args.enteredUsn
-                )
+                    AfterLoginDirections.actionAfterLoginToPersonalDetails(args.singleStudent)
             )
         }
         binding.attendenceButton.setOnClickListener {

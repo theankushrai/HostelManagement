@@ -14,4 +14,8 @@ interface StudentDao {
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     suspend fun insert(student: Student)
+
+    @Query("SELECT * FROM STUDENT WHERE name=(:name) and usn=(:usn)")
+    suspend fun verifyLogin(name: String, usn: String): Student
+
 }

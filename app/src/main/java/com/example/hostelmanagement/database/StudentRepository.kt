@@ -10,4 +10,8 @@ class StudentRepository(private val studentDao: StudentDao) {
 
     suspend fun insert(student: Student) = studentDao.insert(student)
 
+    suspend fun verifyLogin(name: String, usn: String): Student {
+        return studentDao.verifyLogin(name, usn)
+    }
+
 }

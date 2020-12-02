@@ -9,17 +9,18 @@ import kotlinx.parcelize.Parcelize
 @Parcelize
 @Entity
 data class Student(
-    val name: String,
-    @PrimaryKey val USN: String,
-    val room_no: Int,
-    val home_address: String,
-    val e_mail: String,
-    val mobile_no: Long
+        val name: String,
+        @PrimaryKey val USN: String,
+        val room_no: Int,
+        val home_address: String,
+        val e_mail: String,
+        val mobile_no: Long,
 ) : Parcelable
 
 @Entity
 data class StudentNotice(
-    @PrimaryKey(autoGenerate = true) var _id: Int = 0,
-    val notice: Bitmap
+        @PrimaryKey(autoGenerate = true) var _id: Int = 0,
+        val notice: Bitmap
 )
+
 
