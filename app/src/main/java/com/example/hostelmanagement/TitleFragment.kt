@@ -29,7 +29,8 @@ class TitleFragment : Fragment() {
         binding.parentAccess.setOnClickListener {
             it.findNavController().navigate(R.id.action_titleFragment2_to_parentsMain)
         }
-
+        val viewModel = TitleViewModel(requireNotNull(activity).application)
+        viewModel.prepopulate()
         return binding.root
 
 

@@ -20,7 +20,7 @@ class StudentNotice : Fragment() {
     ): View {
         binding = DataBindingUtil.inflate(layoutInflater, R.layout.fragment_student_notice, container, false)
         val application = requireNotNull(activity).application
-        viewModel = StudentViewModel(application, resources)
+        viewModel = StudentViewModel(application)
         val adapter = NoticeAdapter()
 
         viewModel.allNotice.observe(viewLifecycleOwner, { list ->

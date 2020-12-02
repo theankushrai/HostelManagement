@@ -31,7 +31,7 @@ class NoticeAdapter : ListAdapter<StudentNotice, NoticeAdapter.NoticeViewHolder>
         }
 
         override fun areContentsTheSame(oldItem: StudentNotice, newItem: StudentNotice): Boolean {
-            return oldItem == newItem
+            return oldItem._id == newItem._id
         }
 
     }
