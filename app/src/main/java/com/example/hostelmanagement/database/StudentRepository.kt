@@ -14,4 +14,8 @@ class StudentRepository(private val studentDao: StudentDao) {
         return studentDao.verifyLogin(name, usn)
     }
 
+    suspend fun updateAttendence(student: Student) {
+        studentDao.updateAttendence(student)
+    }
+
 }

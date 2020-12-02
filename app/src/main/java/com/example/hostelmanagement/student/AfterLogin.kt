@@ -33,7 +33,7 @@ class AfterLogin : Fragment() {
             )
         }
         binding.attendenceButton.setOnClickListener {
-            it.findNavController().navigate(R.id.action_afterLogin_to_attendence)
+            it.findNavController().navigate(AfterLoginDirections.actionAfterLoginToAttendence(args.singleStudent))
         }
         binding.studentNoticeButton.setOnClickListener {
             it.findNavController().navigate(R.id.action_afterLogin_to_studentNotice)

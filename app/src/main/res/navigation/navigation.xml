@@ -70,7 +70,11 @@
         android:id="@+id/attendence"
         android:name="com.example.hostelmanagement.student.Attendence"
         android:label="fragment_attendence"
-        tools:layout="@layout/fragment_attendence" />
+        tools:layout="@layout/fragment_attendence">
+        <argument
+            android:name="singleStudent"
+            app:argType="com.example.hostelmanagement.database.Student" />
+    </fragment>
     <fragment
         android:id="@+id/studentNotice"
         android:name="com.example.hostelmanagement.student.StudentNotice"

@@ -38,5 +38,11 @@ class StudentViewModel(application: Application) : AndroidViewModel(application)
         }
     }
 
+    fun updateAttendence(student: Student) {
+        viewModelScope.launch {
+            repository.updateAttendence(student)
+        }
+    }
+
 
 }

@@ -37,7 +37,7 @@ class StudentLogin : Fragment() {
         }
         val application = requireNotNull(activity).application
         viewModel = StudentViewModel(application)
-        viewModel.insert(Student("sdjlkf", "18BBTCS012", 21, "f", "f", 545))
+        viewModel.insert(Student("sdjlkf", "18BBTCS012", 21, "f", "f", 545, 28))
         return binding.root
     }
 
