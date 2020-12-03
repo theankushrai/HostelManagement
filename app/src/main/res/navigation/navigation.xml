@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/titleFragment2"
         android:name="com.example.hostelmanagement.TitleFragment"
-        android:label="TitleFragment">
+        android:label="Hoatel Management">
         <action
             android:id="@+id/action_titleFragment2_to_studentLogin"
             app:destination="@id/studentLogin" />
@@ -22,8 +22,8 @@
     <fragment
         android:id="@+id/studentLogin"
         android:name="com.example.hostelmanagement.student.StudentLogin"
-        android:label="fragment_student_login"
-        tools:layout="@layout/fragment_student_login" >
+        android:label="Login"
+        tools:layout="@layout/fragment_student_login">
         <action
             android:id="@+id/action_studentLogin_to_afterLogin"
             app:destination="@id/afterLogin"
@@ -33,8 +33,8 @@
     <fragment
         android:id="@+id/afterLogin"
         android:name="com.example.hostelmanagement.student.AfterLogin"
-        android:label="fragment_after_login"
-        tools:layout="@layout/fragment_after_login" >
+        android:label="Student"
+        tools:layout="@layout/fragment_after_login">
         <action
             android:id="@+id/action_afterLogin_to_personalDetails"
             app:destination="@id/personalDetails" />
@@ -60,7 +60,7 @@
     <fragment
         android:id="@+id/personalDetails"
         android:name="com.example.hostelmanagement.student.PersonalDetails"
-        android:label="fragment_personal_details"
+        android:label="Student Details"
         tools:layout="@layout/fragment_personal_details">
 
         <argument
@@ -71,7 +71,7 @@
     <fragment
         android:id="@+id/attendence"
         android:name="com.example.hostelmanagement.student.Attendence"
-        android:label="fragment_attendence"
+        android:label="Attendence"
         tools:layout="@layout/fragment_attendence">
         <argument
             android:name="singleStudent"
@@ -80,17 +80,17 @@
     <fragment
         android:id="@+id/studentNotice"
         android:name="com.example.hostelmanagement.student.StudentNotice"
-        android:label="fragment_student_notice"
+        android:label="Hostel Notice"
         tools:layout="@layout/fragment_student_notice" />
     <fragment
         android:id="@+id/messMenu"
         android:name="com.example.hostelmanagement.student.MessMenu"
-        android:label="fragment_mess_menu"
+        android:label="Mess Menu"
         tools:layout="@layout/fragment_mess_menu" />
     <fragment
         android:id="@+id/wardenLogin"
         android:name="com.example.hostelmanagement.warden.WardenLogin"
-        android:label="WardenLogin">
+        android:label="Login">
         <action
             android:id="@+id/action_wardenLogin_to_wardenAfterLogin"
             app:destination="@id/wardenAfterLogin"
@@ -100,7 +100,7 @@
     <fragment
         android:id="@+id/wardenAfterLogin"
         android:name="com.example.hostelmanagement.warden.WardenAfterLogin"
-        android:label="WardenAfterLogin">
+        android:label="Warden">
         <action
             android:id="@+id/action_wardenAfterLogin_to_checkAdminNotice"
             app:destination="@id/checkAdminNotice" />
@@ -119,17 +119,17 @@
     <fragment
         android:id="@+id/checkAdminNotice"
         android:name="com.example.hostelmanagement.warden.CheckAdminNotice"
-        android:label="fragment_check_admin_notice"
+        android:label="Admin Notice"
         tools:layout="@layout/fragment_check_admin_notice" />
     <fragment
         android:id="@+id/wardenUpdateNotice"
         android:name="com.example.hostelmanagement.warden.WardenUpdateNotice"
-        android:label="fragment_warden_update_notice"
+        android:label="Update Notice"
         tools:layout="@layout/fragment_warden_update_notice" />
     <fragment
         android:id="@+id/parentsMain"
         android:name="com.example.hostelmanagement.Parents.ParentsMain"
-        android:label="ParentsMain">
+        android:label="Parents">
         <action
             android:id="@+id/action_parentsMain_to_parentsInformation"
             app:destination="@id/parentsInformation"
@@ -142,7 +142,7 @@
     <fragment
         android:id="@+id/parentsInformation"
         android:name="com.example.hostelmanagement.Parents.ParentsInformation"
-        android:label="ParentsInformation">
+        android:label="Login">
         <action
             android:id="@+id/action_parentsInformation_to_personalDetails"
             app:destination="@id/personalDetails" />
@@ -150,5 +150,5 @@
     <fragment
         android:id="@+id/wardenAllStudentDetials"
         android:name="com.example.hostelmanagement.warden.WardenAllStudentDetials"
-        android:label="WardenAllStudentDetials" />
+        android:label="All Students" />
 </navigation>
