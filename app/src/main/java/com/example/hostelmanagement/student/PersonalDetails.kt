@@ -39,6 +39,7 @@ class PersonalDetails : Fragment() {
         binding.emailTextView.text = student.e_mail
         binding.fullnametextview.text = student.name
         binding.mobilenoTetview.text = student.mobile_no.toString()
+        binding.profilePhoto.setImageBitmap(student.image)
 
     }
 }

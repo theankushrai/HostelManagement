@@ -17,6 +17,7 @@ class AllStudentsAdapter :
             binding.fullnametextview.text = student.name
             binding.emailTextView.text = student.e_mail
             binding.USNtextview.text = student.USN
+            binding.profilePhoto.setImageBitmap(student.image)
             binding.RoomnoTextView.text = student.room_no.toString()
 
         }

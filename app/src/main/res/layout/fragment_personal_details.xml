@@ -11,16 +11,16 @@
 
 
         <ImageView
-            android:id="@+id/imageView8"
+            android:id="@+id/profilePhoto"
             android:layout_width="235dp"
             android:layout_height="203dp"
+            android:layout_marginTop="50dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="50dp"
+            app:layout_constraintHorizontal_bias="0.414"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0"
-            app:layout_constraintHorizontal_bias="0.443"
             tools:src="@drawable/ankush" />
 
         <TextView
@@ -33,7 +33,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.047"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView8"
+            app:layout_constraintTop_toBottomOf="@+id/profilePhoto"
             app:layout_constraintVertical_bias="0.069" />
 
         <TextView

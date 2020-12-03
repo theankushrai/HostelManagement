@@ -11,4 +11,8 @@ class NoticeRepository(private val noticeDao: NoticeDao) {
     suspend fun insertNotice(notice: StudentNotice) {
         noticeDao.insertNotice(notice)
     }
+
+    suspend fun delteNotice(notice: StudentNotice) {
+        noticeDao.deleteNotice(notice)
+    }
 }

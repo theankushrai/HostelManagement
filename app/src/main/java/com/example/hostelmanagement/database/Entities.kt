@@ -16,7 +16,8 @@ data class Student(
         val home_address: String,
         val e_mail: String,
         val mobile_no: Long,
-        var attendence: Int
+        var attendence: Int,
+        var image: Bitmap
 ) : Parcelable
 
 @Entity

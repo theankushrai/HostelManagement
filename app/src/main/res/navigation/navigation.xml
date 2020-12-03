@@ -132,7 +132,9 @@
         android:label="ParentsMain">
         <action
             android:id="@+id/action_parentsMain_to_parentsInformation"
-            app:destination="@id/parentsInformation" />
+            app:destination="@id/parentsInformation"
+            app:popUpTo="@id/parentsMain"
+            app:popUpToInclusive="true" />
         <action
             android:id="@+id/action_parentsMain_to_studentNotice"
             app:destination="@id/studentNotice" />
